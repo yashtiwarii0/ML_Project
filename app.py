@@ -20,3 +20,4 @@ if __name__ == "__main__":
     except Exception as e:
         logging.error("An error occurred. Raising custom exception.")
         raise CustomException(e, sys)
+    
