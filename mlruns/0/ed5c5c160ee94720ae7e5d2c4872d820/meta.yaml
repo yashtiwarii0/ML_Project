@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/yash/ML%20project/mlruns/0/ed5c5c160ee94720ae7e5d2c4872d820/artifacts
+end_time: 1747166187945
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ed5c5c160ee94720ae7e5d2c4872d820
+run_name: serious-pug-408
+run_uuid: ed5c5c160ee94720ae7e5d2c4872d820
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747166176697
+status: 3
+tags: []
+user_id: root
