@@ -25,7 +25,7 @@ Predict the **Math score** of students using their scores in other subjects. Thi
   Implemented multiple models and selected the best one using performance metrics.
 
 * 🔁 **MLflow Tracking**
-  Tracks experiments and metrics for each run under `mlruns/`.
+  Tracks experiments and metrics for each run under `mlruns/`. Integrated with **DagsHub** for remote experiment tracking.
 
 * 📦 **MLOps with DVC**
   Handled data versioning and pipeline reproducibility using **DVC** (Data Version Control).
@@ -65,7 +65,7 @@ Predict the **Math score** of students using their scores in other subjects. Thi
 * Pandas, NumPy
 * Scikit-learn, CatBoost
 * Matplotlib, Seaborn
-* DVC, MLflow
+* DVC, MLflow, DagsHub
 * Flask
 * Docker
 
@@ -89,15 +89,34 @@ python app.py
 
 ---
 
+## 🔐 MLflow with DagsHub (Secure Setup)
+
+To use DagsHub as a remote MLflow tracking server, create a `.env` file in your project root (make sure it's in `.gitignore`) and add the following:
+
+```env
+MLFLOW_TRACKING_URI=https://dagshub.com/yashtiwarii0/ML_Project.mlflow
+MLFLOW_TRACKING_USERNAME=yashtiwarii0
+MLFLOW_TRACKING_PASSWORD=your_personal_token_here
+```
+
+Then in your Python code:
+
+```python
+from dotenv import load_dotenv
+import os
+import mlflow
+
+load_dotenv()
+
+mlflow.set_tracking_uri(os.getenv("MLFLOW_TRACKING_URI"))
+mlflow.set_tracking_username(os.getenv("MLFLOW_TRACKING_USERNAME"))
+mlflow.set_tracking_password(os.getenv("MLFLOW_TRACKING_PASSWORD"))
+```
+
+---
+
 ## 📊 Future Enhancements
 
 * Add CI/CD integration with GitHub Actions
 * Extend the app with Streamlit UI
 * Use cloud storage and remote DVC integration (S3/GCP)
-import dagshub
-dagshub.init(repo_owner='yashtiwarii0', repo_name='ML_Project', mlflow=True)
-
-import mlflow
-with mlflow.start_run():
-  mlflow.log_param('parameter name', 'value')
-  mlflow.log_metric('metric name', 1)
