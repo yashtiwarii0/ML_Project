@@ -96,7 +96,7 @@ To use DagsHub as a remote MLflow tracking server, create a `.env` file in your 
 ```env
 MLFLOW_TRACKING_URI=https://dagshub.com/yashtiwarii0/ML_Project.mlflow
 MLFLOW_TRACKING_USERNAME=yashtiwarii0
-MLFLOW_TRACKING_PASSWORD=your_personal_token_here
+MLFLOW_TRACKING_PASSWORD=1251286f313342e782ffa4daff23e5d5c253b0ee
 ```
 
 Then in your Python code:
