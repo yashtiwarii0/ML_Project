@@ -1,58 +1,96 @@
-🎯 Student Math Score Predictor – End-to-End ML Project with MLOps
+# 🎯 Student Math Score Predictor – End-to-End ML Project with MLOps
 
-This project is a complete end-to-end Data Science pipeline aimed at predicting a student's Math score based on their other academic performances. It covers everything from raw data ingestion to model deployment, following best practices in Machine Learning and MLOps.
-🔍 Problem Statement
+This project is a complete end-to-end **Data Science** pipeline aimed at predicting a student's **Math score** based on their other academic performances. It covers everything from raw data ingestion to model deployment, following best practices in **Machine Learning** and **MLOps**.
 
-Predict the Math score of students using their scores in other subjects. This serves as a regression problem where the goal is to help identify students who might need extra support in mathematics based on their overall academic profile.
-🚀 Key Features
+---
 
-    ✅ End-to-End ML Pipeline
-    From data collection to prediction, including preprocessing, training, evaluation, and deployment.
+## 🔍 Problem Statement
 
-    📊 Exploratory Data Analysis (EDA)
-    Understand feature distributions, relationships, and insights using statistical plots.
+Predict the **Math score** of students using their scores in other subjects. This serves as a regression problem where the goal is to help identify students who might need extra support in mathematics based on their overall academic profile.
 
-    ⚙️ Modular Code Structure
-    Structured using custom Python modules under src/ and script-based control via main.py.
+---
 
-    🧪 Machine Learning Models
-    Implemented multiple models and selected the best one using performance metrics.
+## 🚀 Key Features
 
-    🔁 MLflow Tracking
-    Tracks experiments and metrics for each run under mlruns/.
+* ✅ **End-to-End ML Pipeline**
+  From data collection to prediction, including preprocessing, training, evaluation, and deployment.
 
-    📦 MLOps with DVC
-    Handled data versioning and pipeline reproducibility using DVC (Data Version Control).
+* 📊 **Exploratory Data Analysis (EDA)**
+  Understand feature distributions, relationships, and insights using statistical plots.
 
-    🐳 Dockerized
-    The entire application is containerized with a Dockerfile for consistent environments.
+* ⚙️ **Modular Code Structure**
+  Structured using custom Python modules under `src/` and script-based control via `main.py`.
 
-    ⚠️ Exception Handling & Logging
-    Integrated robust error handling and logging to track issues easily.
+* 🧪 **Machine Learning Models**
+  Implemented multiple models and selected the best one using performance metrics.
 
-    🌐 Web Application
-    A minimal Flask-based interface (app.py) for interactive predictions.
+* 🔁 **MLflow Tracking**
+  Tracks experiments and metrics for each run under `mlruns/`.
 
-📌 Tech Stack
+* 📦 **MLOps with DVC**
+  Handled data versioning and pipeline reproducibility using **DVC** (Data Version Control).
 
-    Python 🐍
+* 🐳 **Dockerized**
+  The entire application is containerized with a `Dockerfile` for consistent environments.
 
-    Pandas, NumPy
+* ⚠️ **Exception Handling & Logging**
+  Integrated robust error handling and logging to track issues easily.
 
-    Scikit-learn, CatBoost
+* 🌐 **Web Application**
+  A minimal Flask-based interface (`app.py`) for interactive predictions.
 
-    Matplotlib, Seaborn
+---
 
-    DVC, MLflow
+## 📁 Project Structure (Key Components)
 
-    Flask
+```bash
+.
+├── src/                   # Source code for data pipeline & modeling
+├── artifacts/             # Saved models, processed data, etc.
+├── notebook/              # EDA and experimentation notebooks
+├── mlruns/                # MLflow tracking runs
+├── app.py                 # Flask app for model inference
+├── Dockerfile             # Docker container definition
+├── dvc.yaml/.dvc/         # DVC pipeline files
+├── requirements.txt       # Python dependencies
+├── setup.py               # Project setup script
+└── README.md              # Project overview
+```
 
-    Docker
+---
 
-📊 Future Enhancements
+## 📌 Tech Stack
 
-    Add CI/CD integration with GitHub Actions
+* Python 🐍
+* Pandas, NumPy
+* Scikit-learn, CatBoost
+* Matplotlib, Seaborn
+* DVC, MLflow
+* Flask
+* Docker
 
-    Extend the app with Streamlit UI
+---
 
-    Use cloud storage and remote DVC integration (S3/GCP)
+## ✅ How to Run
+
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/student-math-score-predictor.git
+
+# Set up environment
+pip install -r requirements.txt
+
+# Run the main pipeline
+python main.py
+
+# Launch the app
+python app.py
+```
+
+---
+
+## 📊 Future Enhancements
+
+* Add CI/CD integration with GitHub Actions
+* Extend the app with Streamlit UI
+* Use cloud storage and remote DVC integration (S3/GCP)
