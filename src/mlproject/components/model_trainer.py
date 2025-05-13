@@ -14,6 +14,8 @@ from sklearn.ensemble import (
 )
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
+from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import mean_squared_error
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.tree import DecisionTreeRegressor
 from xgboost import XGBRegressor
@@ -21,6 +23,14 @@ from xgboost import XGBRegressor
 from src.mlproject.exception import CustomException
 from src.mlproject.logger import logging
 from src.mlproject.utils import save_object,evaluate_models
+import dagshub
+
+# Initializes MLflow tracking with DagsHub
+dagshub.init(
+    repo_owner='yashtiwarii0',
+    repo_name='ML_Project',
+    mlflow=True,
+)
 
 
 @dataclass
@@ -117,11 +127,11 @@ class ModelTrainer:
 
             best_params = params[actual_model]
 
-            mlflow.set_registry_uri("https://dagshub.com/krishnaik06/mlprojecthindi.mlflow")
+            mlflow.set_registry_uri("https://dagshub.com/yashtiwarii0/ML_Project.mlflow")
             tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 
             # mlflow
-
+            mlflow.set_tracking_uri("https://dagshub.com/yashtiwarii0/ML_Project.mlflow")
             with mlflow.start_run():
 
                 predicted_qualities = best_model.predict(X_test)

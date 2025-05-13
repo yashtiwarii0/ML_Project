@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/yash/ML%20project/mlruns/0/e6bf8b36b14c49319806f9cec9052c56/artifacts
+end_time: 1747171110330
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e6bf8b36b14c49319806f9cec9052c56
+run_name: righteous-yak-695
+run_uuid: e6bf8b36b14c49319806f9cec9052c56
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747171102578
+status: 3
+tags: []
+user_id: root

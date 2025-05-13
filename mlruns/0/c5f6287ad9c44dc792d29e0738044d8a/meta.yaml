@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/yash/ML%20project/mlruns/0/c5f6287ad9c44dc792d29e0738044d8a/artifacts
+end_time: 1747170952552
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c5f6287ad9c44dc792d29e0738044d8a
+run_name: unleashed-lynx-969
+run_uuid: c5f6287ad9c44dc792d29e0738044d8a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747170944969
+status: 3
+tags: []
+user_id: root

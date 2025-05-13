@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/yash/ML%20project/mlruns/0/d9bac94052d84fcaa2a3b4eff1083f7e/artifacts
+end_time: 1747169179483
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d9bac94052d84fcaa2a3b4eff1083f7e
+run_name: sassy-goat-900
+run_uuid: d9bac94052d84fcaa2a3b4eff1083f7e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747169165374
+status: 3
+tags: []
+user_id: root
